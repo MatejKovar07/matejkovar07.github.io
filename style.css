@@ -1,50 +1,84 @@
-:root{  
-    --bg-page:#f0f4f8;
-    --card-bg:#ffffff;
-    --text:#1a1a1a;
-    --accent:#003366;
+:root {
+  --bg-page: #f0f4f8;
+  --card-bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #003366;
 }
-*{ box-sizing:border-box; }
-body{
-    margin: 0;
-    font-family: inter,roboto,Arial, sans-serif;
-    background: var(--bg-page);
-    color: var(--text);
-    line-height: 1.5;
-    -webkit-font-smoothing:antialiased;
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: var(--bg-page);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-.container{
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 28px;
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(10, 20, 30, 0.08);
-    text-align: left;
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 28px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(10, 20, 30, 0.08);
+  text-align: left;
 }
-.container h1, .container h2{text-align: center;}
-.container img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    margin: 18px auto;
-    transition: transform .28 ease;
+
+.container h1,
+.container h2 {
+  text-align: center;
 }
-.container img:hover{
-    transform: scale(1.03);
+
+.container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 18px auto;
+  transition: transform .28s ease; /* opraveno: .28s a přidán ease */
 }
-h1{font-size: 2rem;color: var(--accent);margin-bottom: 8px;}
-h2{font-size: 1.25rem;color: var(--accent);margin-top: 20px;}
-p, li, a{font-size: 16px;color: var(--text);}
-a{text-decoration: underline;outline-offset: 3px;}
-a:focus{outline: 3px solid rgba(0, 51, 102, 18);}
-p{margin-bottom: 14px;}
-.section sep{
-    height: 1px;
-    background: linear-gradient(90degrgba(0, 0, 0, 0.06),rgba(0, 0, 0, 0.02));
-    margin: 22px 0;
+
+.container img:hover {
+  transform: scale(1.03);
 }
-@media(min-width:900px){
-    .container{font-size: 16px;}
+
+h1 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-top: 20px;
+}
+
+p, li, a {
+  font-size: 16px;
+  color: var(--text);
+}
+
+a {
+  text-decoration: underline;
+  outline-offset: 3px;
+}
+
+a:focus {
+  outline: 3px solid rgba(0, 51, 102, 0.18); /* opraveno: 0.18 místo 18 */
+}
+
+p { margin-bottom: 14px; }
+
+/* opraven selektor a syntaxi gradientu */
+.section-sep {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));
+  margin: 22px 0;
+}
+
+@media (min-width: 900px) {
+  .container { font-size: 16px; }
 }
