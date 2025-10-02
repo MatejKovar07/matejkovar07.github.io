@@ -7,53 +7,103 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to StarCraft II Universe</h1>
-    <p class="intro">Discover the epic battles between <strong>Terran</strong>, <strong>Protoss</strong> and <strong>Zerg</strong>.  
-    Choose your race, master the units, and conquer the galaxy!</p>
+  <header class="site-header">
+    <div class="header-inner container">
+      <h1 class="logo">StarCraft II Universe</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lore.html">Lore</a></li>
+          <li><a href="#surprise" id="surprise-link">Surprise</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="intro">Discover the epic battles between <strong>Terran</strong>, <strong>Protoss</strong> and <strong>Zerg</strong>. Choose your race, master the units, and conquer the galaxy!</p>
+
+    <section class="race-panel">
+      <div class="race-card terran" data-race="terran">
+        <h2>Terran</h2>
+        <img src="SC2Marine.jpg" alt="Terran Marine">
+        <p>Resilient humans relying on powerful machines and tactical flexibility.</p>
+      </div>
+
+      <div class="race-card protoss" data-race="protoss">
+        <h2>Protoss</h2>
+        <img src="SC2Zealot.jpg" alt="Protoss Zealot">
+        <p>Advanced technology and powerful psionic abilities.</p>
+      </div>
+
+      <div class="race-card zerg" data-race="zerg">
+        <h2>Zerg</h2>
+        <img src="SC2Zergling.jpg" alt="Zerg Zergling">
+        <p>Relentless, evolving creatures overwhelming enemies with sheer numbers.</p>
+      </div>
+    </section>
 
     <div class="section-sep"></div>
 
-    <h2>Terran – Masters of Technology</h2>
-    <p>Terrans are resilient humans relying on powerful machines and tactical flexibility.</p>
-    <img src="SC2Marine.jpg" alt="Terran Marine" width="400">
-    <h3>Key Units:</h3>
-    <ul>
-      <li><strong>Marine</strong> – versatile infantry with Stimpack ability</li>
-      <li><strong>Marauder</strong> – armored soldier effective vs structures</li>
-      <li><strong>Banshee</strong> – cloaked air unit specialized in harassment</li>
-    </ul>
+    <section>
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="https://starcraft.fandom.com/wiki/Terran" target="_blank">Terran Wiki</a></li>
+        <li><a href="https://starcraft.fandom.com/wiki/Protoss" target="_blank">Protoss Wiki</a></li>
+        <li><a href="https://starcraft.fandom.com/wiki/Zerg" target="_blank">Zerg Wiki</a></li>
+      </ul>
+    </section>
 
-    <a href="https://starcraft.fandom.com/wiki/Terran" target="_blank">Terran Wiki</a>
+    <section id="surprise" class="surprise-section">
+      <h2>Random Unit — Surprise!</h2>
+      <p>Click the button to get a random unit and a short fun fact.</p>
+      <button id="random-btn">Show me a unit</button>
+      <div id="random-result" class="random-result" aria-live="polite"></div>
+    </section>
+  </main>
 
-    <div class="section-sep"></div>
 
-    <h2>Protoss – Advanced Alien Civilization</h2>
-    <p>Protoss wield advanced technology and powerful psionic abilities.</p>
-    <img src="SC2Zealot.jpg" alt="Protoss Zealot" width="400">
-    <h3>Key Units:</h3>
-    <ul>
-      <li><strong>Zealot</strong> – melee warrior with Charge ability</li>
-      <li><strong>Stalker</strong> – ranged unit with Blink teleport</li>
-      <li><strong>Colossus</strong> – massive robot with thermal lances</li>
-    </ul>
+  <script>
+    // Surprise feature: Random unit + small animation + changes page accent color
+    const units = [
+      {name: 'Marine', race: 'Terran', img: 'SC2Marine.jpg', fact: 'The Marine can use Stimpack to increase fire rate at a health cost.'},
+      {name: 'Marauder', race: 'Terran', img: 'SC2Marauder.jpg', fact: 'Marauders are effective vs armored units and buildings.'},
+      {name: 'Zealot', race: 'Protoss', img: 'SC2Zealot.jpg', fact: 'Zealots use Charge to close gaps quickly.'},
+      {name: 'Stalker', race: 'Protoss', img: 'SC2Stalker.jpg', fact: 'Stalkers can Blink to reposition instantly.'},
+      {name: 'Zergling', race: 'Zerg', img: 'SC2Zergling.jpg', fact: 'Zerglings are cheap and come in pairs.'},
+      {name: 'Ultralisk', race: 'Zerg', img: 'SC2Ultralisk.jpg', fact: 'Ultralisks are massive melee tanks with cleavers.'}
+    ];
 
-    <a href="https://starcraft.fandom.com/wiki/Protoss" target="_blank">Protoss Wiki</a>
+    const accentMap = {
+      terran: '--accent-terran',
+      protoss: '--accent-protoss',
+      zerg: '--accent-zerg'
+    };
 
-    <div class="section-sep"></div>
+    document.getElementById('random-btn').addEventListener('click', () => {
+      const r = units[Math.floor(Math.random() * units.length)];
+      const res = document.getElementById('random-result');
+      res.innerHTML = `
+        <div class="unit-card ${r.race.toLowerCase()}">
+          <h4>${r.name} <span class="unit-race">(${r.race})</span></h4>
+          <img src="${r.img}" alt="${r.name}">
+          <p>${r.fact}</p>
+        </div>`;
 
-    <h2>Zerg – Swarm of the Void</h2>
-    <p>Zerg are relentless, evolving creatures overwhelming enemies with sheer numbers.</p>
-    <img src="SC2Zergling.jpg" alt="Zerg Zergling" width="400">
-    <h3>Key Units:</h3>
-    <ul>
-      <li><strong>Zergling</strong> – fast melee attacker, spawns in pairs</li>
-      <li><strong>Hydralisk</strong> – ranged attacker with deadly spikes</li>
-      <li><strong>Ultralisk</strong> – giant tank-like beast with massive cleavers</li>
-    </ul>
+      const root = document.documentElement;
+      const cssVar = accentMap[r.race.toLowerCase()] || '--accent';
+      const color = getComputedStyle(root).getPropertyValue(cssVar).trim() || '#58a6ff';
+      root.style.setProperty('--accent', color);
 
-    <a href="https://starcraft.fandom.com/wiki/Zerg" target="_blank">Zerg Wiki</a>
-  </div>
+      res.classList.remove('pop');
+      void res.offsetWidth;
+      res.classList.add('pop');
+    });
+
+    document.getElementById('surprise-link').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('#surprise').scrollIntoView({behavior: 'smooth'});
+    });
+  </script>
 </body>
 </html>
-
