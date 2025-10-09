@@ -16,10 +16,17 @@ body { margin: 0; font-family: Orbitron, Arial, sans-serif; background: var(--bg
 .site-header { background: linear-gradient(90deg, rgba(0,0,0,0.2), rgba(255,255,255,0.02)); border-bottom: 1px solid rgba(255,255,255,0.03); position: sticky; top: 0; z-index: 10; }
 .header-inner { max-width: 900px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
 .logo { margin: 0; color: var(--accent); font-size: 1.2rem; }
-.main-nav ul { list-style: none; display: flex; gap: 12px; margin: 0; padding: 0; }
-.main-nav a { color: var(--text); text-decoration: none; padding: 8px 12px; border-radius: 8px; }
+
+/* navigation with icons */
+.main-nav ul { list-style: none; display: flex; gap: 12px; margin: 0; padding: 0; align-items: center; }
+.main-nav a { color: var(--text); text-decoration: none; padding: 8px 12px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+.main-nav a .icon { font-size: 1.1rem; line-height: 1; }
 .main-nav a:hover { background: rgba(88,166,255,0.06); color: var(--accent); }
 
+/* small "label" wrapper so we can hide text on mobile but keep icons */
+.main-nav .label { display: inline-block; }
+
+/* main content */
 h1 { text-align: center; color: var(--accent); }
 .intro { text-align: center; color: #9da5b4; }
 
@@ -43,10 +50,17 @@ h1 { text-align: center; color: var(--accent); }
 #random-btn { padding: 10px 14px; font-size: 16px; border-radius: 8px; border: none; cursor: pointer; background: var(--accent); color: #071224; }
 #random-btn:hover { filter: brightness(0.95); }
 
-.site-footer { text-align: center; color: #9da5b4; margin: 28px auto; }
+.site-footer { text-align: center; color: #9da5b4; margin: 28px auto; padding: 18px 0; border-top: 1px solid rgba(255,255,255,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border-radius: 0 0 12px 12px; }
 
+/* responsive: hide labels on small screens but keep icons visible */
 @media (max-width: 640px) {
   .header-inner { padding: 10px; }
   .main-nav ul { gap: 8px; }
   .unit-card { grid-template-columns: 1fr 90px; }
+  /* hide text labels but keep icons */
+  .main-nav .label { display: none; }
+  /* make nav items more compact on mobile */
+  .main-nav a { padding: 8px; border-radius: 10px; }
+  /* optionally increase icon size slightly on mobile for tap targets */
+  .main-nav a .icon { font-size: 1.25rem; }
 }

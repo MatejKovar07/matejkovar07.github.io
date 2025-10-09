@@ -5,16 +5,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Lore — StarCraft II Universe</title>
   <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner container">
       <h1 class="logo">StarCraft II Universe</h1>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Hlavní menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lore.html">Lore</a></li>
-          <li><a href="index.html#surprise">Surprise</a></li>
+          <li>
+            <a href="index.html" title="Home">
+              <i class="fa-solid fa-house icon" aria-hidden="true"></i>
+              <span class="label">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="lore.html" title="Lore">
+              <i class="fa-solid fa-book icon" aria-hidden="true"></i>
+              <span class="label">Lore</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#surprise" title="Surprise">
+              <i class="fa-solid fa-dice icon" aria-hidden="true"></i>
+              <span class="label">Surprise</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -52,7 +68,21 @@
       <h3>Why it matters</h3>
       <p>Beyond strategy gameplay, StarCraft’s lore gives each faction meaning: Terrans fight for survival and honor, Protoss for tradition and unity, Zerg for evolution and dominance. The characters’ personal journeys (especially Kerrigan and Raynor) provide emotional weight that made StarCraft a long-lasting narrative favorite in gaming.</p>
     </section>
+  </main>
 
+  <footer class="site-footer">
+  <div class="container">
+
+    <p>
+      <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">
+        <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" height="31" width="88">
+      </a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">
+        <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" height="31" width="88">
+      </a>
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>

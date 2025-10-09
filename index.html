@@ -5,16 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StarCraft II Universe</title>
   <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner container">
       <h1 class="logo">StarCraft II Universe</h1>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Hlavní menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lore.html">Lore</a></li>
-          <li><a href="#surprise" id="surprise-link">Surprise</a></li>
+          <li>
+            <a href="index.html" title="Home">
+              <i class="fa-solid fa-house icon" aria-hidden="true"></i>
+              <span class="label">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="lore.html" title="Lore">
+              <i class="fa-solid fa-book icon" aria-hidden="true"></i>
+              <span class="label">Lore</span>
+            </a>
+          </li>
+          <li>
+            <a href="#surprise" id="surprise-link" title="Surprise">
+              <i class="fa-solid fa-dice icon" aria-hidden="true"></i>
+              <span class="label">Surprise</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -23,7 +39,7 @@
   <main class="container">
     <p class="intro">Discover the epic battles between <strong>Terran</strong>, <strong>Protoss</strong> and <strong>Zerg</strong>. Choose your race, master the units, and conquer the galaxy!</p>
 
-    <section class="race-panel">
+    <section class="race-panel" aria-label="Races">
       <div class="race-card terran" data-race="terran">
         <h2>Terran</h2>
         <img src="SC2Marine.jpg" alt="Terran Marine">
@@ -43,18 +59,18 @@
       </div>
     </section>
 
-    <div class="section-sep"></div>
+    <div class="section-sep" role="separator"></div>
 
     <section>
       <h3>Quick links</h3>
       <ul>
-        <li><a href="https://starcraft.fandom.com/wiki/Terran" target="_blank">Terran Wiki</a></li>
-        <li><a href="https://starcraft.fandom.com/wiki/Protoss" target="_blank">Protoss Wiki</a></li>
-        <li><a href="https://starcraft.fandom.com/wiki/Zerg" target="_blank">Zerg Wiki</a></li>
+        <li><a href="https://starcraft.fandom.com/wiki/Terran" target="_blank" rel="noopener">Terran Wiki</a></li>
+        <li><a href="https://starcraft.fandom.com/wiki/Protoss" target="_blank" rel="noopener">Protoss Wiki</a></li>
+        <li><a href="https://starcraft.fandom.com/wiki/Zerg" target="_blank" rel="noopener">Zerg Wiki</a></li>
       </ul>
     </section>
 
-    <section id="surprise" class="surprise-section">
+    <section id="surprise" class="surprise-section" aria-live="polite">
       <h2>Random Unit — Surprise!</h2>
       <p>Click the button to get a random unit and a short fun fact.</p>
       <button id="random-btn">Show me a unit</button>
@@ -62,9 +78,22 @@
     </section>
   </main>
 
+  <footer class="site-footer">
+  <div class="container">
+
+    <p>
+      <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">
+        <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" height="31" width="88">
+      </a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">
+        <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" height="31" width="88">
+      </a>
+    </p>
+  </div>
+</footer>
+
 
   <script>
-    // Surprise feature: Random unit + small animation + changes page accent color
     const units = [
       {name: 'Marine', race: 'Terran', img: 'SC2Marine.jpg', fact: 'The Marine can use Stimpack to increase fire rate at a health cost.'},
       {name: 'Marauder', race: 'Terran', img: 'SC2Marauder.jpg', fact: 'Marauders are effective vs armored units and buildings.'},
