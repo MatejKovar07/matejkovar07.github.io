@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StarCraft II Universe</title>
   <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
@@ -23,12 +23,6 @@
             <a href="lore.html" title="Lore">
               <i class="fa-solid fa-book icon" aria-hidden="true"></i>
               <span class="label">Lore</span>
-            </a>
-          </li>
-          <li>
-            <a href="#surprise" id="surprise-link" title="Surprise">
-              <i class="fa-solid fa-dice icon" aria-hidden="true"></i>
-              <span class="label">Surprise</span>
             </a>
           </li>
         </ul>
@@ -69,70 +63,19 @@
         <li><a href="https://starcraft.fandom.com/wiki/Zerg" target="_blank" rel="noopener">Zerg Wiki</a></li>
       </ul>
     </section>
-
-    <section id="surprise" class="surprise-section" aria-live="polite">
-      <h2>Random Unit — Surprise!</h2>
-      <p>Click the button to get a random unit and a short fun fact.</p>
-      <button id="random-btn">Show me a unit</button>
-      <div id="random-result" class="random-result" aria-live="polite"></div>
-    </section>
   </main>
 
   <footer class="site-footer">
-  <div class="container">
-
-    <p>
-      <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">
-        <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" height="31" width="88">
-      </a>
-      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">
-        <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" height="31" width="88">
-      </a>
-    </p>
-  </div>
-</footer>
-
-
-  <script>
-    const units = [
-      {name: 'Marine', race: 'Terran', img: 'SC2Marine.jpg', fact: 'The Marine can use Stimpack to increase fire rate at a health cost.'},
-      {name: 'Marauder', race: 'Terran', img: 'SC2Marauder.jpg', fact: 'Marauders are effective vs armored units and buildings.'},
-      {name: 'Zealot', race: 'Protoss', img: 'SC2Zealot.jpg', fact: 'Zealots use Charge to close gaps quickly.'},
-      {name: 'Stalker', race: 'Protoss', img: 'SC2Stalker.jpg', fact: 'Stalkers can Blink to reposition instantly.'},
-      {name: 'Zergling', race: 'Zerg', img: 'SC2Zergling.jpg', fact: 'Zerglings are cheap and come in pairs.'},
-      {name: 'Ultralisk', race: 'Zerg', img: 'SC2Ultralisk.jpg', fact: 'Ultralisks are massive melee tanks with cleavers.'}
-    ];
-
-    const accentMap = {
-      terran: '--accent-terran',
-      protoss: '--accent-protoss',
-      zerg: '--accent-zerg'
-    };
-
-    document.getElementById('random-btn').addEventListener('click', () => {
-      const r = units[Math.floor(Math.random() * units.length)];
-      const res = document.getElementById('random-result');
-      res.innerHTML = `
-        <div class="unit-card ${r.race.toLowerCase()}">
-          <h4>${r.name} <span class="unit-race">(${r.race})</span></h4>
-          <img src="${r.img}" alt="${r.name}">
-          <p>${r.fact}</p>
-        </div>`;
-
-      const root = document.documentElement;
-      const cssVar = accentMap[r.race.toLowerCase()] || '--accent';
-      const color = getComputedStyle(root).getPropertyValue(cssVar).trim() || '#58a6ff';
-      root.style.setProperty('--accent', color);
-
-      res.classList.remove('pop');
-      void res.offsetWidth;
-      res.classList.add('pop');
-    });
-
-    document.getElementById('surprise-link').addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector('#surprise').scrollIntoView({behavior: 'smooth'});
-    });
-  </script>
+    <div class="container">
+      <p>
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">
+          <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" height="31" width="88">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">
+          <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" height="31" width="88">
+        </a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
