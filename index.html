@@ -25,6 +25,14 @@
       footer {
         font-size: 0.9rem;
       }
+      /* nový styl pro tlačítka vedle sebe */
+      .project-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 25px;
+      }
     </style>
   </head>
 
@@ -37,10 +45,13 @@
       <h2>Vítej na mém portfoliu!</h2>
       <p>
         Jsem začátečník v jazyku <strong>HTML</strong> a toto je moje první webová stránka.
-        Učím se tvořit čisté a přehledné weby. Níže se můžeš podívat na moji první práci.
+        Učím se tvořit čisté a přehledné weby. Níže se můžeš podívat na moje projekty.
       </p>
 
-      <a href="html/index.html" class="btn">Zobrazit moji první stránku</a>
+      <div class="project-buttons">
+        <a href="html/index.html" class="btn">Moje první stránka</a>
+        <a href="googlesearch/index.html" class="btn">Google Search</a>
+      </div>
 
       <p style="margin-top: 40px;">
         Sleduj mě také na
