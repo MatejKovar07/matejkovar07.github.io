@@ -57,3 +57,12 @@ input[type="submit"]:hover {
   display: inline-block;
   width: 200px;
 }
+footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.validators img {
+  margin: 0 6px;
+  vertical-align: middle;
+}
