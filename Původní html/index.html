@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje HTML práce</title>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Moje HTML práce</h1>
+    </header>
+
+    <main>
+      <h2>Původní projekty</h2>
+      <p>Zde najdeš všechny HTML projekty, které jsem doposud vytvořil.</p>
+
+ <div class="project-buttons">
+  <a class="btn" href="../Původní html/html/index.html">Moje první stránka</a>
+  <a class="btn" href="../Původní html/hello-web/index.html">Změna stupňů</a>
+  <a class="btn" href="../Původní html/googlesearch/index.html">Google search</a>
+  <a class="btn" href="../Původní html/colour/index.html">Změna barev</a>
+</div>
+
+<p style="margin-top: 25px;">
+  <a href="../index.html">← zpět na rozcestník</a>
+</p>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Matěj Kovář
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

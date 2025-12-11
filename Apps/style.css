@@ -1,0 +1,164 @@
+:root {
+  --bg-top: #071224;
+  --bg-bottom: #0e203d;
+  --accent: #ffd166;
+  --text: #d7e7f7;
+  --muted: #aeb7c3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+main h2 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+p {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--bg-top);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #ffca3a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 209, 102, 0.4);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px 20px;
+  color: #9fb7d2;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+footer h3 {
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.validators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.validators img {
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+.credits {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #7f91a6;
+}
+
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+.list {
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+.list a {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
