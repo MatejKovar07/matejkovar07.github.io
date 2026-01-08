@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Hra života s ovládáním pravidel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hra života</h1>
+
+    <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="clearBtn">Clear</button>
+        <label>
+          Pravidla (B/S): 
+          <input type="text" id="rulesInput" value="B3/S23" placeholder="např. B3/S23">
+        </label>
+        <button id="setRulesBtn">Nastavit pravidla</button>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
