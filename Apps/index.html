@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jednoduché JavaScript aplikace – portfolio Matěje Kováře">
     <title>Jednoduché JS aplikace</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -13,24 +14,29 @@
     </header>
 
     <main>
-      <h2>Moje JavaScript projekty</h2>
-      <p>Zde jsou odkazy na mé aplikace. Všechny zdrojové kódy najdeš v samostatném GitHub repozitáři.</p>
+      <h2>Moje projekty</h2>
+      <p>Vyber si aplikaci, kterou chceš spustit.</p>
 
-      <ul>
-        <li>
-          <a href="gameoflife/index.html">
-            Hra života (Game of Life)
-          </a>
-        </li>
-      </ul>
+      <div class="project-buttons">
+        <a href="gameoflife/index.html" class="btn">Hra života</a>
+      </div>
 
-      <p style="margin-top: 25px;">
+      <p class="back">
         <a href="../index.html">← Zpět na rozcestník</a>
       </p>
     </main>
 
     <footer>
-      © <span id="year"></span> Matěj Kovář
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p>
+          <a href="mailto:matejkovar07@gmail.com">matejkovar07@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="credits">
+        © <span id="year"></span> Matěj Kovář — Všechna práva vyhrazena
+      </div>
     </footer>
 
     <script>
