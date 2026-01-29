@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  background: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.joke {
+  margin-top: 1rem;
+}

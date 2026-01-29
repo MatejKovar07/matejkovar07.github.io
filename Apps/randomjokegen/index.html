@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joke Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Joke Generator</h1>
+
+    <!-- KATEGORIE -->
+    <section class="box">
+      <h3>Categories</h3>
+      <label><input type="checkbox" class="cat" value="Programming"> Programming</label>
+      <label><input type="checkbox" class="cat" value="Dark"> Dark</label>
+      <label><input type="checkbox" class="cat" value="Pun"> Pun</label>
+      <label><input type="checkbox" class="cat" value="Misc"> Misc</label>
+    </section>
+
+    <!-- TYP VTIPU -->
+    <section class="box">
+      <h3>Joke Type</h3>
+      <select id="type">
+        <option value="">Any</option>
+        <option value="single">Single</option>
+        <option value="twopart">Two Part</option>
+      </select>
+    </section>
+
+    <!-- JAZYK -->
+    <section class="box">
+      <h3>Language</h3>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="cs">Czech</option>
+      </select>
+    </section>
+
+    <!-- BLACKLIST -->
+    <section class="box">
+      <h3>Blacklist Flags</h3>
+      <label><input type="checkbox" class="flag" value="nsfw"> NSFW</label>
+      <label><input type="checkbox" class="flag" value="religious"> Religious</label>
+      <label><input type="checkbox" class="flag" value="political"> Political</label>
+      <label><input type="checkbox" class="flag" value="racist"> Racist</label>
+      <label><input type="checkbox" class="flag" value="sexist"> Sexist</label>
+    </section>
+
+    <!-- SAFE MODE -->
+    <section class="box">
+      <label class="safe">
+        <input type="checkbox" id="safeMode" checked>
+        Safe Mode
+      </label>
+    </section>
+
+    <!-- TLAČÍTKO -->
+    <button id="getJoke">Get Joke</button>
+
+    <!-- VÝSTUP -->
+    <div id="jokeBox" class="joke"></div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
