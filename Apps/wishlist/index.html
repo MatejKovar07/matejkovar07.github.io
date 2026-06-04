@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS2 Wishlist — Portfolio</title>
-    <!-- Tady je důležité to "../../style.css", aby to našlo tvůj styl -->
+    <!-- Cesta "../../style.css" zajistí, že se styly načtou i z vnořené složky -->
     <link rel="stylesheet" href="../../style.css">
-  </head>
+</head>
+<body>
 
-  <body>
     <header>
-      <h1>Portfolio — Matěj Kovář</h1>
+        <h1>Portfolio — Matěj Kovář</h1>
     </header>
 
     <main>
-      <h2>CS2 Wishlist</h2>
-      <p>Tady se můžeš podívat na mou full-stack aplikaci běžící na serveru.</p>
+        <h2>CS2 Wishlist</h2>
+        <p>Moje full-stack aplikace pro správu CS2 skinů běžící na serveru.</p>
 
-      <div class="project-buttons">
-        <a href="https://makousek1.eu.pythonanywhere.com/" target="_blank" class="btn">Otevřít živou aplikaci</a>
-        <a href="../../index.html" class="btn" style="background: #4e525a;">← Zpět na úvod</a>
-      </div>
+        <div class="project-buttons">
+            <a href="https://makousek1.eu.pythonanywhere.com/" target="_blank" class="btn">Otevřít živou aplikaci</a>
+            <a href="../../index.html" class="btn" style="background: #4e525a;">← Zpět na úvod</a>
+        </div>
     </main>
 
     <footer>
-      <div class="credits">
-        © <span id="year"></span> Matěj Kovář
-      </div>
+        <div class="credits">
+            © <span id="year"></span> Matěj Kovář
+        </div>
     </footer>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-  </body>
+</body>
 </html>
