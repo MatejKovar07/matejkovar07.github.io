@@ -151,3 +151,10 @@ footer a:hover {
     font-size: 0.9rem;
   }
 }
+.button-container {
+  display: flex;
+  gap: 15px; /* mezera mezi tlačítky */
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}

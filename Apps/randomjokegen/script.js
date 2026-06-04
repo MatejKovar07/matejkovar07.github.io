@@ -13,7 +13,7 @@ async function getJoke() {
     const data = await res.json();
 
     if (data.error) {
-      jokeBox.textContent = "Something went wrong 😢";
+      jokeBox.textContent = "Something went wrong";
       return;
     }
 
@@ -26,7 +26,7 @@ async function getJoke() {
       `;
     }
   } catch (err) {
-    jokeBox.textContent = "Failed to load joke 😬";
+    jokeBox.textContent = "Failed to load joke";
   }
 }
 
