@@ -1,4 +1,36 @@
-<div class="d-flex justify-content-center mt-4">
-    <a href="html_prace.html" class="btn btn-primary mx-2">Moje HTML práce</a>
-    <a href="js_aplikace.html" class="btn btn-secondary mx-2">Jednoduché JS aplikace</a>
-    <a href="https://makousek1.eu.pythonanywhere.com/" target="_blank" class="btn">CS2 Wishlist (Live)</a>
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Wishlist — Portfolio</title>
+    <!-- Tady je důležité to "../../style.css", aby to našlo tvůj styl -->
+    <link rel="stylesheet" href="../../style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Portfolio — Matěj Kovář</h1>
+    </header>
+
+    <main>
+      <h2>CS2 Wishlist</h2>
+      <p>Tady se můžeš podívat na mou full-stack aplikaci běžící na serveru.</p>
+
+      <div class="project-buttons">
+        <a href="https://makousek1.eu.pythonanywhere.com/" target="_blank" class="btn">Otevřít živou aplikaci</a>
+        <a href="../../index.html" class="btn" style="background: #4e525a;">← Zpět na úvod</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="credits">
+        © <span id="year"></span> Matěj Kovář
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
