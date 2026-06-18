@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jednoduché JavaScript aplikace – portfolio Matěje Kováře">
-    <title>Jednoduché JS aplikace</title>
+    <meta name="description" content="Portfolio Matěje Kováře – rozcestník projektů.">
+    <title>Portfolio — Rozcestník</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+
+  <body>
     <header>
-        <h1>Jednoduché JS aplikace</h1>
+      <h1>Portfolio — Matěj Kovář</h1>
     </header>
+
     <main>
-        <h2>Moje projekty</h2>
-        <p>Vyber si aplikaci, kterou chceš spustit.</p>
-        <div class="project-buttons">
-            <a href="gameoflife/index.html" class="btn">Hra života</a>
-            <a href="kamenpapirnuzky/index.html" class="btn">Kámen, nůžky, papír, tapír, spok</a>
-            <a href="randomjokegen/index.html" class="btn">Vtipy</a>
-        </div>
-        <p class="back">
-            <a href="../index.html">← Zpět na rozcestník</a>
-        </p>
+      <h2>Vyber si sekci</h2>
+      <p>Co chceš zobrazit?</p>
+
+      <div class="project-buttons">
+        <a href="puvodnihtml/index.html" class="btn">Moje HTML práce</a>
+        <a href="Apps/index.html" class="btn">Jednoduché JS aplikace</a>
+        <a href="Apps/wishlist/index.html" class="btn">CS2 Wishlist</a>
+      </div>
     </main>
+
     <footer>
-        <p>&copy; 2026 Matěj Kovář</p>
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p><a href="mailto:matejkovar07@gmail.com">matejkovar07@gmail.com</a></p>
+      </div>
+
+      <div class="credits">
+        © <span id="year"></span> Matěj Kovář — Všechna práva vyhrazena
+      </div>
     </footer>
-</body>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
